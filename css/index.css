@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overlay-navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.ulist {
+    list-style-type: none;
+    padding: 30px;
+    margin: 30px;
+}
+
+
+.ulist {
+    position: absolute;
+    top: 20%;
+    list-style: none;
+}
+
+.ulist li {
+    padding-top: 50px;
+    color: white; 
+    border-radius: 5px;
+}
+
+.ulist .list {
+    z-index: 1000; 
+}
+
+.line{
+    position: absolute;
+    top : 60%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 3px; /* Width of the vertical line */
+    height: 90%; /* Height of the vertical line */
+    background-color: #fff; /* Color of the vertical line */
+    z-index: 2000; /* Ensure it's above the cover photo */
+}
+
+.motto {
+    position: absolute;
+    top: 35%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Text color */
+    font-weight: bold; /* Adjust font weight */
+    text-align: center; /* Center text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    z-index: 2000; /* Ensure it's above the cover photo */
+}
+
+.motto2 {
+    position: absolute;
+    top: 45%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Text color */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    text-align: center; /* Center text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    z-index: 2000; /* Ensure it's above the cover photo */
+}
+.grid-cont img{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+.container1 {
+    display:flex;
+    width: 33.33%;
+    padding:50px;
+}
+
+
+/*menu*/
+
+.grid2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-left: 60px;
+    padding-top:20px;
+    color:white;
+
+}
+
+.grid2-item {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+.buttonn{
+    margin-left: 150px;
+    background-color: black;
+    color:white;
+    margin-top:70px;
+    width:120px;
+    padding:5px;
+}
+
+.buttonn:hover {
+    background-color: darkred;
+}
+
+.hiring {
+    display: flex; 
+    align-items: center;
+
+}
+
+.footerr{
+    color:white;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:10px;
+}
+
+
