@@ -1,7 +1,30 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+    --coffeeRed: #480b0b;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 1100px) {
+    #line {
+        display: none;
+    }
+    #sidebarList {
+        display: none;
+    }
+}
+
+.nav-item a:not(#activeNav):focus, .nav-item a:not(#activeNav):hover{
+    background: var(--coffeeRed);
+    border-radius: 5px;
+    color: white;
+}
+
+#activeNav {
+    color: white;
+    text-decoration: underline var(--coffeeRed);
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
 }
 
 .overlay-navbar{
@@ -12,36 +35,36 @@
     z-index: 1000;
 }
 
-.ulist {
+#sidebarList {
     list-style-type: none;
     padding: 30px;
     margin: 30px;
-}
-
-
-.ulist {
     position: absolute;
     top: 20%;
     list-style: none;
 }
 
-.ulist li {
+#sidebarList li {
     padding-top: 50px;
     color: white; 
     border-radius: 5px;
 }
 
-.ulist .list {
+#sidebarList li a {
+    all: unset;
+}
+
+#sidebarList .list {
     z-index: 1000; 
 }
 
-.line{
+#line{
     position: absolute;
-    top : 60%;
+    top : 50%;
     left: 15%;
     transform: translate(-50%, -50%);
     width: 3px; /* Width of the vertical line */
-    height: 90%; /* Height of the vertical line */
+    height: 60%; /* Height of the vertical line */
     background-color: #fff; /* Color of the vertical line */
     z-index: 2000; /* Ensure it's above the cover photo */
 }
@@ -84,38 +107,25 @@
 
 /*menu*/
 
-.grid2{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding-left: 60px;
-    padding-top:20px;
-    color:white;
-
-}
-
-.grid2-item {
-    padding: 20px;
-    font-size: 30px;
-  }
-
 .buttonn{
-    margin-left: 150px;
-    background-color: black;
-    color:white;
-    margin-top:70px;
-    width:120px;
-    padding:5px;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 17px 30px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
 }
 
 .buttonn:hover {
     background-color: darkred;
-}
-
-.hiring {
-    display: flex; 
-    align-items: center;
-
 }
 
 .footerr{
@@ -126,3 +136,15 @@
 }
 
 
+.productCategory {
+    background-size: 100% 100%; 
+    box-shadow: 10px 10px 15px;
+    cursor: pointer;
+}
+.productCategory:hover {
+    background-size: 100% 100%; 
+    box-shadow: 15px 15px 30px 10px var(--coffeeRed);
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
