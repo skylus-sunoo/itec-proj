@@ -28,7 +28,7 @@ html {
 
     #sloganTagline {
         position: absolute;
-        top: 16%;
+        top: 21%;
         left: 5%;
         color: #fff;
         font-size: 24px;
@@ -61,7 +61,7 @@ html {
 
     #sloganTagline {
         position: absolute;
-        top: 30%;
+        top: 35%;
         left: 10%;
         color: #fff;
         font-size: 24px;
@@ -87,17 +87,18 @@ html {
 */
     #sloganMotto {
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 20%;
         color: #fff;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         z-index: 2000;
+        zoom: 1.75;
     }
 
     #sloganTagline {
         position: absolute;
-        top: 40%;
+        top: 58%;
         left: 20%;
         color: #fff;
         font-size: 24px;
@@ -307,7 +308,7 @@ html {
     border-color: white;
 }
 
-.productCategory:hover div img {
+.productCategory:hover div img{
     transform: scale(1.1);
     transition: transform 0.5s ease;
 }
@@ -325,7 +326,7 @@ html {
     text-align: center;
 }
 
-.productCategory div p::after {
+.productCategory div p::after{
     content: '';
     position: absolute;
     left: 0;
@@ -338,6 +339,122 @@ html {
 
 .productCategory:hover div p::after {
     width: 100%;
+}
+
+
+.productItem {
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.productItem:hover div img{
+    transform: scale(1.25);
+    transition: transform 0.5s ease;
+}
+
+.itemHot {
+    position: absolute;
+    right: 30px; 
+    top: 30px;
+    background-color: red;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-right: 9px;
+    zoom: 0.75;
+}
+.itemBest {
+    position: absolute;
+    right: 30px; 
+    top: 30px;
+    background-color: purple;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-right: 9px;
+    zoom: 0.75;
+}
+.itemNew {
+    position: absolute;
+    right: 30px; 
+    top: 30px;
+    background-color: lightseagreen;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-right: 9px;
+    zoom: 0.75;
+}
+.itemFav {
+    position: absolute;
+    right: 30px; 
+    top: 30px;
+    background-color: darkgoldenrod;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-right: 9px;
+    zoom: 0.75;
+}
+.productCategoryTitle {
+    position: absolute; 
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 0; 
+    right: 0; 
+    top: 7vh;
+}
+@media only screen and (max-width: 1800px) {
+    .productCategoryTitle{
+        top: 7vh;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .productCategoryTitle{
+        top: 3vh;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .productCategoryTitle{
+        top: 2vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .productCategoryTitle{
+        top: 1vh;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .productCategoryTitle{
+        top: 0;
+    }
+}
+
+#navMenuGoBack li{
+    list-style-type: none;  
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.navMenuBarList{
+    list-style-type: none;  
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: lightgray;
+}
+#navMenuBarActive{
+    list-style-type: none;  
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: darkred;
+    color: white;
+}
+.navMenuBarList a{
+    text-decoration: none;
+    color: black;
 }
 
 .locationTitle {

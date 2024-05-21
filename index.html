@@ -20,10 +20,22 @@
             }
         }
 
+        @media only screen and (max-width: 444px) {
+            #sectionHiring {
+                background: url(images/bgHiring.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
         #sectionMenu {
             background: url(images/bgMenu.png);
             background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        #sectionTestimonials {
+            background: url(images/bgTestimonials.png);
         }
 
         #sectionLocations {
@@ -71,6 +83,8 @@
         <ul id="sidebarList">
             <li class="sidebarListSweep px-3"><a href="#sectionMenu">Menu</a></li>
             <li style="padding: 25px;"></li>
+            <li class="sidebarListSweep px-3"><a href="#sectionTestimonials">Testimonials</a></li>
+            <li style="padding: 25px;"></li>
             <li class="sidebarListSweep px-3"><a href="#sectionLocations">Locations</a></li>
             <li style="padding: 25px;"></li>
             <li class="sidebarListSweep px-3"><a href="#sectionHiring">Hiring</a></li>
@@ -79,7 +93,7 @@
         <div id="line"></div>
 
         <section class="slogan container-fluid">
-            <h1 id="sloganMotto"> MOTTO MO TO! ./.</h1>
+            <h1 id="sloganMotto">THE ONLY <span style="color: darkred;">SHOT</span><br>YOU'LL EVER NEED</h1>
             <h3 id="sloganTagline"><span id="cursor">|</span></h3>
         </section>
 
@@ -132,10 +146,10 @@
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400">
                         <a href="productHotCoffee.html" style="all: unset;">
                             <div class="p-5">
-                                <div style="background-image: url(images/bgProduct.png);"
+                                <div style="background-image: url(images/bgProductCategory.png);"
                                     class="rounded-5 productCategory">
                                     <div>
-                                        <img src="images/products/HotCoffee-SpanishLatte.png"
+                                        <img src="images/products/categories/hotCoffee.png"
                                             style="position: relative; bottom: 8vh;" class="img-fluid p-4">
                                         <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
                                             class="text-white text-center h2 fw-bolder">Hot <span
@@ -146,71 +160,126 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400" data-aos-duration="750">
-                        <div class="p-5">
-                            <div style="background-image: url(images/bgProduct.png);" class="rounded-5 productCategory">
-                                <div>
-                                    <img src="images/products/HotCoffee-MochaLatte.png"
-                                        style="position: relative; bottom: 8vh;" class="img-fluid p-4">
-                                    <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
-                                        class="text-white text-center h2 fw-bolder">Ice <span
-                                            style="color: darkred;">Coffee</span></p>
+                        <a href="productIceCoffee.html" style="all: unset;">
+                            <div class="p-5">
+                                <div style="background-image: url(images/bgProductCategory.png);"
+                                    class="rounded-5 productCategory">
+                                    <div>
+                                        <img src="images/products/categories/iceCoffee.png"
+                                            style="position: relative; bottom: 8vh;" class="img-fluid p-4">
+                                        <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
+                                            class="text-white text-center h2 fw-bolder">Ice <span
+                                                style="color: darkred;">Coffee</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400" data-aos-duration="1000">
-                        <div class="p-5">
-                            <div style="background-image: url(images/bgProduct.png);" class="rounded-5 productCategory">
-                                <div>
-                                    <img src="images/products/HotCoffee-SpanishLatte.png"
-                                        style="position: relative; bottom: 8vh;" class="img-fluid p-4">
-                                    <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
-                                        class="text-white text-center h2 fw-bolder">Non-<span
-                                            style="color: darkred;">Coffee</span></p>
+                        <a href="productNonCoffee.html" style="all: unset;">
+                            <div class="p-5">
+                                <div style="background-image: url(images/bgProductCategory.png);"
+                                    class="rounded-5 productCategory">
+                                    <div>
+                                        <img src="images/products/categories/nonCoffee.png"
+                                            style="position: relative; bottom: 8vh;" class="img-fluid p-4">
+                                        <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
+                                            class="text-white text-center h2 fw-bolder">Non-<span
+                                                style="color: darkred;">Coffee</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400">
-                        <div class="p-5">
-                            <div style="background-image: url(images/bgProduct.png);" class="rounded-5 productCategory">
-                                <div>
-                                    <img src="images/products/HotCoffee-SpanishLatte.png"
-                                        style="position: relative; bottom: 8vh;" class="img-fluid p-4">
-                                    <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
-                                        class="text-white text-center h2 fw-bolder">Fra<span
-                                            style="color: darkred;">ppe</span></p>
+                        <a href="productFrappe.html" style="all: unset;">
+                            <div class="p-5">
+                                <div style="background-image: url(images/bgProductCategory.png);"
+                                    class="rounded-5 productCategory">
+                                    <div>
+                                        <img src="images/products/categories/frappe.png"
+                                            style="position: relative; bottom: 8vh;" class="img-fluid p-4">
+                                        <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
+                                            class="text-white text-center h2 fw-bolder">Fra<span
+                                                style="color: darkred;">ppe</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400" data-aos-duration="750">
-                        <div class="p-5">
-                            <div style="background-image: url(images/bgProduct.png);" class="rounded-5 productCategory">
-                                <div>
-                                    <img src="images/products/HotCoffee-MochaLatte.png"
-                                        style="position: relative; bottom: 8vh;" class="img-fluid p-4">
-                                    <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
-                                        class="text-white text-center h2 fw-bolder">Crof<span
-                                            style="color: darkred;">fles</span></p>
+                        <a href="productCroffles.html" style="all: unset;">
+                            <div class="p-5">
+                                <div style="background-image: url(images/bgProductCategory.png);"
+                                    class="rounded-5 productCategory">
+                                    <div>
+                                        <img src="images/products/categories/croffles.png"
+                                            style="position: relative; bottom: 8vh;" class="img-fluid p-4">
+                                        <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
+                                            class="text-white text-center h2 fw-bolder">Crof<span
+                                                style="color: darkred;">fles</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="400" data-aos-duration="1000">
-                        <div class="p-5">
-                            <div style="background-image: url(images/bgProduct.png);" class="rounded-5 productCategory">
-                                <div>
-                                    <img src="images/products/HotCoffee-MochaLatte.png"
-                                        style="position: relative; bottom: 8vh;" class="img-fluid p-4">
-                                    <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
-                                        class="text-white text-center h2 fw-bolder">Add <span
-                                            style="color: darkred;">Ons</span></p>
+                        <a href="productAddOns.html" style="all: unset;">
+                            <div class="p-5">
+                                <div style="background-image: url(images/bgProductCategory.png);"
+                                    class="rounded-5 productCategory">
+                                    <div>
+                                        <img src="images/products/categories/addOns.png"
+                                            style="position: relative; bottom: 8vh;" class="img-fluid p-4">
+                                        <p style="position: relative; bottom: 7vh; mix-blend-mode: difference;"
+                                            class="text-white text-center h2 fw-bolder">Add <span
+                                                style="color: darkred;">Ons</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </section>
+            </div>
+        </div>
+
+        <div id="sectionTestimonials" class="text-white">
+            <div class="pb-5">
+                <div class="container row m-auto gy-5">
+                    <div class="col-md-6 align-items-center justify-content-center" data-aos="zoom-in">
+                        <div class="d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
+                            <p class="h1">TESTIMONIALS</p>
+                            <img src="images/bgTestimonialsIcon.png" class="img-fluid rounded-5 w-75"
+                                alt="Testimonials Icon">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <section data-aos="fade-left">
+                            <i class="p-2 fa fa-2xl fa-quote-left"></i>
+                            <p class="px-4 pt-2">This shop is a hidden gem! The cozy ambiance and charming decor make it
+                                the perfect spot to relax and unwind. I've found my new favorite hangout!</p>
+                            <i class="p-2 fa fa-2xl fa-quote-right float-end"></i>
+                            <p class="h5 py-5 text-end">Elian Medina</p>
+                        </section>
+                        <section data-aos="fade-left">
+                            <i class="p-2 fa fa-2xl fa-quote-left"></i>
+                            <p class="px-4 pt-2">The staff here are incredibly friendly and attentive. They always make
+                                me feel welcome and remember my usual order, which is a nice personal touch. Top-notch
+                                service every single visit!</p>
+                            <i class="p-2 fa fa-2xl fa-quote-right float-end"></i>
+                            <p class="h5 py-5 text-end">Fabian Buclod</p>
+                        </section>
+                        <section data-aos="fade-left">
+                            <i class="p-2 fa fa-2xl fa-quote-left"></i>
+                            <p class="px-4 pt-2">The coffee is simply unparalleled. Every cup is brewed to perfection,
+                                rich and flavorful with just the right balance. Their Spanish Latte is a must-try -
+                                absolutely delicious!</p>
+                            <i class="p-2 fa fa-2xl fa-quote-right float-end"></i>
+                            <p class="h5 py-5 text-end">Casandra Zamora</p>
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -221,7 +290,8 @@
                         <div class="mx-lg-5 my-lg-5 mx-md-3 my-md-3 mx-sm-1 mx-sm-1 p-3 boxLocation">
                             <p class="h4 locationTitle" style="color: darkred;">SM CITY DASMARINAS</p>
                             <div class="text-white">
-                                <p class="h5">Third Floor <br> <br> Monday - Thursday <br> <span class="locationTime">10:00 AM to 6:00 PM</span> <br>
+                                <p class="h5">Third Floor <br> <br> Monday - Thursday <br> <span
+                                        class="locationTime">10:00 AM to 6:00 PM</span> <br>
                                     Friday -
                                     Saturday <br> <span class="locationTime">10:00 AM to 8:00 PM</span></p>
                             </div>
@@ -232,7 +302,8 @@
                         <div class="mx-lg-5 my-lg-5 mx-md-3 my-md-3 mx-sm-1 my-sm-1 p-3 boxLocation">
                             <p class="h4 locationTitle" style="color: darkred;">SM CITY DASMARINAS</p>
                             <div class="text-white">
-                                <p class="h5">Third Floor <br> <br> Monday - Thursday <br> <span class="locationTime">10:00 AM to 6:00 PM</span> <br>
+                                <p class="h5">Third Floor <br> <br> Monday - Thursday <br> <span
+                                        class="locationTime">10:00 AM to 6:00 PM</span> <br>
                                     Friday -
                                     Saturday <br> <span class="locationTime">10:00 AM to 8:00 PM</span></p>
                             </div>
@@ -276,11 +347,17 @@
                 <div class="col-sm-6">
                     <div class="mx-lg-5 my-lg-5 mx-md-3 my-md-3 mx-sm-1 mx-sm-1 p-3">
                         <div class="h3">
-                            <a href="#sectionMenu" style="text-decoration: none; color: white;" class="sidebarListSweep px-3">Menu</a>
+                            <a href="#sectionMenu" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Menu</a>
                             <br>
-                            <a href="#sectionLocations" style="text-decoration: none; color: white;" class="sidebarListSweep px-3">Locations</a>
+                            <a href="#sectionTestimonials" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Testimonials</a>
                             <br>
-                            <a href="#sectionHiring" style="text-decoration: none; color: white;" class="sidebarListSweep px-3">Hiring</a>
+                            <a href="#sectionLocations" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Locations</a>
+                            <br>
+                            <a href="#sectionHiring" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Hiring</a>
                         </div>
                     </div>
                 </div>

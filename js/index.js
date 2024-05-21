@@ -1,6 +1,6 @@
 var i = 0;
-var txt = 'eme eme eme raw sabi ni skid'; 
-var speed = 50;
+var txt = 'Experience the perfect blend of flavor and comfort in<br>every cup. Where every sip brings you closer to coffee bliss.'; 
+var speed = 30;
 
 function typeWriter() {
   if (i < txt.length) {
