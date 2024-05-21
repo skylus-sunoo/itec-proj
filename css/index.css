@@ -1,33 +1,167 @@
 :root {
     --coffeeRed: #480b0b;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 600px) {
     #line {
         display: none;
     }
+
     #sidebarList {
         display: none;
     }
+
+    #sloganMotto {
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        zoom: 0.5;
+    }
+
+    #sloganTagline {
+        position: absolute;
+        top: 16%;
+        left: 5%;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        zoom: 0.5;
+    }
 }
 
-.nav-item a:not(#activeNav):focus, .nav-item a:not(#activeNav):hover{
-    background: var(--coffeeRed);
-    border-radius: 5px;
+@media only screen and (min-width: 601px) and (max-width: 1101px) {
+    #line {
+        display: none;
+    }
+
+    #sidebarList {
+        display: none;
+    }
+
+    #sloganMotto {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        zoom: 0.7;
+    }
+
+    #sloganTagline {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        zoom: 0.7;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+    /*
+    #sloganMotto, #sloganTagline {
+        zoom: 0.5;
+    }
+
+    .slogan {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+    }
+*/
+    #sloganMotto {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+    }
+
+    #sloganTagline {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+    }
+}
+
+.nav-item a:not(#activeNav):focus,
+.nav-item a:not(#activeNav):hover {
+    position: relative;
     color: white;
+}
+
+.nav-item a:not(#activeNav):focus::before,
+.nav-item a:not(#activeNav):hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: darkred;
+    border-radius: 5px;
+    z-index: -1;
+    animation: glow 0.3s;
+}
+@keyframes glow {
+    from,
+    to {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }
 
 #activeNav {
     color: white;
-    text-decoration: underline var(--coffeeRed);
+    text-decoration: underline darkred;
     text-underline-offset: 7px;
     text-decoration-thickness: 2px;
 }
 
-.overlay-navbar{
+#cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+    zoom: 1.2;
+}
+
+@keyframes blink {
+    from,
+    to {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.overlay-navbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,69 +179,97 @@ html {
 }
 
 #sidebarList li {
-    padding-top: 50px;
-    color: white; 
+    padding: 5px;
+    color: white;
     border-radius: 5px;
 }
 
 #sidebarList li a {
-    all: unset;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+}
+#sidebarList li:hover a {
+    opacity: 1.0;
 }
 
-#sidebarList .list {
-    z-index: 1000; 
+.sidebarListSweep {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
-#line{
+.sidebarListSweep:before {
+    content: "";
     position: absolute;
-    top : 50%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: darkred;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.sidebarListSweep:hover,
+.sidebarListSweep:focus,
+.sidebarListSweep:active {
+    color: white;
+}
+
+.sidebarListSweep:hover:before,
+.sidebarListSweep:focus:before,
+.sidebarListSweep:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#line {
+    position: absolute;
+    top: 50%;
     left: 15%;
     transform: translate(-50%, -50%);
-    width: 3px; /* Width of the vertical line */
-    height: 60%; /* Height of the vertical line */
-    background-color: #fff; /* Color of the vertical line */
-    z-index: 2000; /* Ensure it's above the cover photo */
+    width: 3px;
+    /* Width of the vertical line */
+    height: 60%;
+    /* Height of the vertical line */
+    background-color: #fff;
+    /* Color of the vertical line */
+    z-index: 2000;
+    /* Ensure it's above the cover photo */
 }
 
-.motto {
-    position: absolute;
-    top: 35%;
-    left: 34%;
-    transform: translate(-50%, -50%);
-    color: #fff; /* Text color */
-    font-weight: bold; /* Adjust font weight */
-    text-align: center; /* Center text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
-    z-index: 2000; /* Ensure it's above the cover photo */
-}
-
-.motto2 {
-    position: absolute;
-    top: 45%;
-    left: 34%;
-    transform: translate(-50%, -50%);
-    color: #fff; /* Text color */
-    font-size: 24px; /* Adjust font size */
-    font-weight: bold; /* Adjust font weight */
-    text-align: center; /* Center text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
-    z-index: 2000; /* Ensure it's above the cover photo */
-}
-.grid-cont img{
-    display:grid;
+.grid-cont img {
+    display: grid;
     grid-template-columns: auto auto auto;
 }
 
 .container1 {
-    display:flex;
+    display: flex;
     width: 33.33%;
-    padding:50px;
+    padding: 50px;
 }
 
 
-/*menu*/
+/* H I R I N G */
 
-.buttonn{
+.buttonn {
     display: inline-block;
     outline: 0;
     text-align: center;
@@ -128,23 +290,72 @@ html {
     background-color: darkred;
 }
 
-.footerr{
-    color:white;
-    text-align:center;
-    padding-top:20px;
-    padding-bottom:10px;
-}
 
 
+/* M E N U */
 .productCategory {
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
     box-shadow: 10px 10px 15px;
     cursor: pointer;
 }
+
 .productCategory:hover {
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
     box-shadow: 15px 15px 30px 10px var(--coffeeRed);
     border-style: solid;
     border-width: 5px;
     border-color: white;
+}
+
+.productCategory:hover div img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.productCategory div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productCategory div p {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.productCategory div p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease;
+}
+
+.productCategory:hover div p::after {
+    width: 100%;
+}
+
+.locationTitle {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    
+}
+.locationTime {
+    font-weight: lighter;
+    font-size: larger;
+    font-style: italic;
+}
+
+.boxLocation {
+    background-color: #00000041;
+    border-radius: 15px;
+    text-align: center;
+    background-size: 100% 100%;
+    box-shadow: 0 0 15px white;
 }
