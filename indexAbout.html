@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-2.css">
+
+    <style>
+        body {
+            background: url(images/bgAboutUs.png);
+            background-attachment: fixed;
+        }
+
+        main {
+            background: url(images/bgHiring.png);
+        }
+
+        .aboutUs-overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .aboutUs-overlayParent:hover .aboutUs-overlay {
+            opacity: 1;
+        }
+
+        footer {
+            background: url(images/bgFooter.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header style="position: relative;">
+        <nav class="navbar navbar-expand-lg navbar-dark"
+            style="padding-left:70px; padding-top:20px; background-color: var(--coffeeRedDark);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">LOGO </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="padding-left:150px">
+                            <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item" id="activeNav" style="padding-left:150px">
+                            <a class="nav-link active" href="indexAbout.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-item" style="padding-left:150px">
+                            <a class="nav-link" href="#">CONTACTS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container bg-light my-5 p-5 rounded-5 shadow-lg">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <img src="images/bgAboutUsBarista.png" class="img-thumbnail" style="box-shadow: 0 0 25px 5px black">
+            </div>
+            <div class="col-lg-6">
+                <p class="display-1 fw-semibold">About Us</p>
+                <div class="row">
+                    <div class="col-lg-6 h4 fw-lighter">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, tenetur? Quod aut nisi qui
+                            delectus? Soluta eaque aliquid, error unde animi mollitia optio tempore laboriosam? Eligendi
+                            debitis quidem eius ipsum?</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, tenetur? Quod aut nisi qui
+                            delectus? Soluta eaque aliquid, error unde animi mollitia optio tempore laboriosam? Eligendi
+                            debitis quidem eius ipsum?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, tenetur? Quod aut nisi qui
+                            delectus? Soluta eaque aliquid, error unde animi mollitia optio tempore laboriosam? Eligendi
+                            debitis quidem eius ipsum?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center">
+            <br>
+            <br>
+            <p class="display-2 fst-italic">
+                The Team
+            </p>
+            <br>
+        </div>
+        <div class="row mt-2 gy-3">
+            <div class="col-lg-6">
+                <div class="row gy-3">
+                    <div class="col-lg-6 aboutUs-overlayParent" data-aos="fade-up" data-aos-offset="200"
+                        data-aos-duration="750">
+                        <div id="insetBlur">
+                            <img src="images/about/dejesus.png" class="img-fluid">
+                        </div>
+                        <p class="h5 position-relative text-white fw-bold aboutUs-overlay" style="bottom: 88px;">
+                            Sebastiene Rhodney De Jesus</p>
+                    </div>
+                    <div class="col-lg-6 aboutUs-overlayParent" data-aos="fade-up" data-aos-offset="200"
+                        data-aos-duration="750">
+                        <div id="insetBlur">
+                            <img src="images/about/pangilinan.png" class="img-fluid">
+                        </div>
+                        <p class="h5 position-relative text-white fw-bold aboutUs-overlay" style="bottom: 88px;">Ronald
+                            Tyrone<br>Pangilinan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row gy-3">
+                    <div class="col-lg-6 aboutUs-overlayParent" data-aos="fade-up" data-aos-offset="200"
+                        data-aos-duration="750">
+                        <div id="insetBlur">
+                            <img src="images/about/ramos.png" class="img-fluid">
+                        </div>
+                        <p class="h5 position-relative text-white fw-bold aboutUs-overlay" style="bottom: 88px;">
+                            Christian Jay<br>Ramos</p>
+                    </div>
+                    <div class="col-lg-6 aboutUs-overlayParent" data-aos="fade-up" data-aos-offset="200"
+                        data-aos-duration="750">
+                        <div id="insetBlur">
+                            <img src="images/about/skid.png" class="img-fluid">
+                        </div>
+                        <p class="h5 position-relative text-white fw-bold aboutUs-overlay" style="bottom: 88px;">John
+                            Patrick<br>Skidmore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white text-center" style="background-color: rgb(33, 0, 0);">
+        <div class="pb-5">
+            <div class="container row m-auto gy-5">
+                <div class="col-sm-6">
+                    <div class="mx-lg-5 my-lg-5 mx-md-3 my-md-3 mx-sm-1 mx-sm-1 p-3">
+                        <div class="h3">
+                            <a href="#sectionMenu" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Menu</a>
+                            <br>
+                            <a href="#sectionTestimonials" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Testimonials</a>
+                            <br>
+                            <a href="#sectionLocations" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Locations</a>
+                            <br>
+                            <a href="#sectionHiring" style="text-decoration: none; color: white;"
+                                class="sidebarListSweep px-3">Hiring</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="mx-lg-5 my-lg-5 mx-md-3 my-md-3 mx-sm-1 my-sm-1 p-3">
+                        <p class="h4">FOLLOW US ON</p>
+                        <div style="font-size:15px">
+                            <br>
+                            <i class="p-2 fa fa-2xl fa-facebook"></i>
+                            <i class="p-2 fa fa-2xl fa-instagram"></i>
+                            <i class="p-2 fa fa-2xl fa-twitter"></i>
+                            <br> <br>
+                            <em> @2024 Menu4You</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/kitfontawesome.js"></script>
+    <script> AOS.init(); </script>
 </body>
+
 </html>

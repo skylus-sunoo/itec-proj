@@ -1,0 +1,21 @@
+nav {
+    box-shadow: 0 5px 10px 10px var(--coffeeRedDark);
+}
+#insetBlur {
+    position: relative;
+}
+
+#insetBlur:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 50px 10px black;
+}
+
+#insetBlur > img {
+    width: 100%;
+    display: block;
+}
