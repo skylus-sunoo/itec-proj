@@ -1,6 +1,7 @@
 nav {
     box-shadow: 0 5px 10px 10px var(--coffeeRedDark);
 }
+
 #insetBlur {
     position: relative;
 }
@@ -15,7 +16,7 @@ nav {
     box-shadow: inset 0px 0px 50px 10px black;
 }
 
-#insetBlur > img {
+#insetBlur>img {
     width: 100%;
     display: block;
 }
