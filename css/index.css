@@ -297,7 +297,7 @@ html {
 
 /* H I R I N G */
 
-.buttonn {
+.applyNow {
     display: inline-block;
     outline: 0;
     text-align: center;
@@ -314,7 +314,7 @@ html {
     line-height: 30px;
 }
 
-.buttonn:hover {
+.applyNow:hover {
     background-color: darkred;
 }
 
@@ -335,25 +335,25 @@ html {
     border-color: white;
 }
 
-.productCategory:hover div img{
+.productCategory:hover article img{
     transform: scale(1.1);
     transition: transform 0.5s ease;
 }
 
-.productCategory div {
+.productCategory article {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.productCategory div p {
+.productCategory article p {
     position: relative;
     display: inline-block;
     text-align: center;
 }
 
-.productCategory div p::after{
+.productCategory article p::after{
     content: '';
     position: absolute;
     left: 0;
@@ -364,7 +364,7 @@ html {
     transition: width 0.5s ease;
 }
 
-.productCategory:hover div p::after {
+.productCategory:hover article p::after {
     width: 100%;
 }
 
